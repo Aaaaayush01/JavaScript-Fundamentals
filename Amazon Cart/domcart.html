@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="domcart.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="
+        subscribe();
+    "class="Subscribe">Subscribe</button>
+    <p>Amazon Shipping Calcultor</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input  class="amount" type="text" placeholder="Cost of order" onkeydown="
+        handleEvent(event);">
+
+    <button class="CalculateButton" onclick="
+        calculate();
+    ">Calculate</button>
+    <p class="totalCost"></p>
+    <p>Rock Paper Scissors</p>
+    <a href="">Click here</a>
+
+    <script>
+        function subscribe () {
+            const buttonElement = document.querySelector('.Subscribe');
+            if (buttonElement.innerHTML === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('subscribed');
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove('subscribed');
+            }
+        }
+
+        function calculate() {
+            const charge = document.querySelector('.amount');
+            let finalCost = Number(charge.value);
+            if (finalCost < 40) {
+                finalCost += 10;
+            }
+            else {
+                finalCost = finalCost;
+            }
+            document.querySelector('.totalCost').innerHTML = `$${finalCost.toFixed(2)}`;
+        }
+
+        function handleEvent(event) {
+            if (event.key === 'Enter') {
+                calculate();
+            }
+        }
+    </script>
+</body>
+</html>

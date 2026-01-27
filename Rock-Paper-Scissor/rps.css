@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+}
+body h1,p {
+    color: white;
+}
+.rock,.paper,.scissors {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border-color: white;
+    border-style: solid;
+    background-color: black;
+    margin: 4px;
+    cursor: pointer;
+}
+
+body img {
+    width: 72px;
+    height: 72px;
+    padding: 16px;
+}
+
+.Reset, .AutoPlay {
+    padding: 6px;
+    margin: 6px;
+}

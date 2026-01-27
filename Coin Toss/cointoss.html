@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Toss</title>
+</head>
+<body>
+    <button class="heads" onclick="flip('Heads')">Heads</button>
+<button class="tails" onclick="flip('Tails')">Tails</button>
+
+<p class="youChose"></p>
+<p class="outcome"></p>
+<p class="result"></p>
+
+<input class="userInput" onkeyup="
+    showText();
+" type="text">
+
+<p class="keyUp"></p>
+
+<script>
+    function showText() {
+        const value = document.querySelector('.userInput').value;
+        document.querySelector('.keyUp').innerHTML = value;
+    }
+
+    function flip(choice) {
+        const outcome = Math.random() < 0.5 ? 'Heads' : 'Tails';
+
+        document.querySelector('.youChose').innerHTML = `You chose: ${choice}`;
+        document.querySelector('.outcome').innerHTML = `Coin landed on: ${outcome}`;
+
+        if (choice === outcome) {
+            document.querySelector('.result').innerHTML = 'You win!';
+        } else {
+            document.querySelector('.result').innerHTML = 'You lose!';
+        }
+    }
+</script>
+
+</body>
+</html>

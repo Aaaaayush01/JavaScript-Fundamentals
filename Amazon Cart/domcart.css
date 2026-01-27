@@ -1,0 +1,35 @@
+.Subscribe {
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 42px;
+}
+
+.subscribed {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+
+.default {
+    color: white;
+    background-color: black;
+}
+
+.amount {
+    padding: 8px;
+}
+
+.CalculateButton {
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-style: none;
+}

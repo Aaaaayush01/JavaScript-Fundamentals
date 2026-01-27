@@ -1,0 +1,34 @@
+.newTask, .dueDate {
+font-size: 15px;
+padding: 6px;
+}
+
+.add {
+    background-color: green;
+    color: white;
+    border-style: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.deleteButton {
+    background-color: darkred;
+    color: white;
+    border-style: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.myTodoList,
+.addTask {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+.addTask {
+    margin: 10px;
+}
